@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="function.js"></script>
+</head>
+<body>
+    <script>
+        let Goblins = new Monster("哥布林",40,15,0); //1
+        let salamander = new Monster("火精靈",80,15,35); //2
+        let wolf = new Monster("惡犬狼",50,20,15); //3
+        let boss = new Monster("魔獸",220,30,0);
+        let temp_array = [Goblins,salamander,wolf];
+        RandomSort(temp_array); // 隨機排序
+        console.log("戰鬥開始");
+        for(;temp_array.length>0;){
+            Attack(temp_array.pop(),boss);
+        }
+        win_lose();
+        
+    </script>
+    
+</body>
+</html>
